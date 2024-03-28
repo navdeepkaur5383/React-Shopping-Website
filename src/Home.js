@@ -24,14 +24,14 @@ function Home() {
     }
 
   return (
-    <div class="card-container">
+    <div className="card-container">
 
 {
     data.map((i,j)=>
     <div className='card'>
 
   <img src={i.image}></img>
-  <div class="container">
+  <div className="container">
     <h4>{i.title}</h4> 
     <p>{i.price}</p> 
     <button onClick={()=>handleAdd(i)}>Add to Cart</button>

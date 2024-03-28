@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { removetocart } from './redux-work/Cartslice'
 
 function Cart() {
   const sel=useSelector((state)=>state.cart)
   const dispatch=useDispatch()
+ 
   function handleRemove(item){
     dispatch(removetocart(item))
 
   }
+  // useEffect(()=>{
+  //   localStorage.setItem('cart',JSON.stringify(sel))
+  // },[sel])
   return (
    
    <div className='card-container'>
